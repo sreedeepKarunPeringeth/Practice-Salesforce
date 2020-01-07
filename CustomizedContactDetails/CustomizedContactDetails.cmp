@@ -1,0 +1,39 @@
+<aura:component controller="ContactDetailsController" implements="flexipage:availableForAllPageTypes" >
+   
+    <aura:registerEvent name="myEvent" type="c:myEvent"/>
+    <!--<aura:attribute name="contactVariable" type="string" default="12345"/>-->
+    <aura:attribute name="displayContacts" type="contact[]"/>
+    <aura:attribute name="allContacts" type="contact[]"/>
+    <aura:attribute name="contactIdValue" type="String"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.controllerAction}"/>
+    
+    <form class="someClassName">
+    <lightning:input aura:id="displayContactId" name="contactId" label="Enter contactId to search" 
+                     value="{!v.contactIdValue}"  style="width: 255px !important;"/>
+    <lightning:button label="SEARCH" onclick="{!c.handleClick}"/>
+    </form>
+    <section class="display">
+        <aura:iteration var="cnt" items="{!v.displayContacts}">
+            
+            <section class="slds-box slds-grid slds-grid_vertical">
+                <h2 class="resultHeader ">Seach Results !!!</h2>
+                <div>Name:  {!cnt.Name}</div>
+                <div>Account:  {!cnt.Account.Id}</div>
+                <div>Phone:  {!cnt.Phone}</div>
+            </section>
+            <lightning:button label="TryMe" onclick="{!c.handleFireEvent}"/>
+        </aura:iteration>
+    </section>
+    
+    
+    <section class="AllContacts slds-grid slds-grid_vertical slds-gutters">
+        <aura:iteration var="cnt" items="{!v.allContacts}">
+            <div class="slds-col slds-box">
+                <span>Name:  {!cnt.Name} </span>
+                <span> ContactId:  {!cnt.Id}</span>
+            </div>
+        </aura:iteration>
+                                        
+    </section>
+</aura:component>

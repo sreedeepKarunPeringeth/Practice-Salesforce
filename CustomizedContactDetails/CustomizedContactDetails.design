@@ -1,0 +1,5 @@
+<design:component>
+    
+    <design:attribute name="contactIdValue" label="Enter contact id to search !!!" />
+	
+</design:component>
