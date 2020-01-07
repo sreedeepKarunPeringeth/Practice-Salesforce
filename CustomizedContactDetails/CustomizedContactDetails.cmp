@@ -22,7 +22,7 @@
                 <div>Account:  {!cnt.Account.Id}</div>
                 <div>Phone:  {!cnt.Phone}</div>
             </section>
-            <lightning:button label="TryMe" onclick="{!c.handleFireEvent}"/>
+            <lightning:button label="TryMe" aura:id="InputSelectDynamic" value="{!cnt.ContactId__c}" onclick="{!c.handleFireEvent}"/>
         </aura:iteration>
     </section>
     
