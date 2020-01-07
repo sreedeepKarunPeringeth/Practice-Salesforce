@@ -36,8 +36,9 @@
     
     handleFireEventHelper : function(component,event) {
         var appEvent = $A.get("e.c:myEvent");
-        console.log('read from cmp ');
-        appEvent.setParams({"ContactId":"12345"});
+        var nam = component.find("InputSelectDynamic").get("v.value");
+        console.log('read from cmp,nam '+ nam);
+        appEvent.setParams({"ContactId":nam});
         appEvent.fire();
     }
 })
