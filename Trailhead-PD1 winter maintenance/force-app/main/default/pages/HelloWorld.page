@@ -1,0 +1,18 @@
+<apex:page showHeader="true">
+    <apex:pageBlock title="PageBlock!!">
+    	<apex:pageBlockSection title="1st section">
+        	1st child under pageblock.
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="2nd section">
+        	2nd child under pageblock;
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+    <apex:pageBlock title="new PageBlock">
+    	<apex:pageBlockSection title="3rd section">
+        	New child
+        </apex:pageBlockSection>
+        <apex:pageBlockSection >
+        	New child again
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

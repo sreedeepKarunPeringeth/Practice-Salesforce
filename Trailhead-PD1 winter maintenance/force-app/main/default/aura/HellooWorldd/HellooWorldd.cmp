@@ -1,0 +1,20 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+	
+    
+    <aura:attribute name="username" type="string" default="hello"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.dofun}" />
+    
+    <div class="main">
+    	Hi Sreedeep !! -- <b>{!v.username}</b>
+        <div class="second">
+        	Second div !!!
+        </div>
+    </div>
+    <div class="parallel">
+    	Third div !!
+    </div>
+    
+    <lightning:button variant='brand' label='click me' onClick='{!c.handleClick}'/>
+    <b>{!v.username}</b>
+</aura:component>

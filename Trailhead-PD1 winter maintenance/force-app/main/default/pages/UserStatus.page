@@ -1,0 +1,11 @@
+<apex:page >
+    <apex:pageBlock >
+    	<apex:pageBlockSection >
+        		{! $user.firstName & ' ' & $user.lastName}
+            	{!$user.userName}
+            	{! Today() + 7 }
+            {! Day(Today())}
+            {! contains('salesforce.com','force.coM')}
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>

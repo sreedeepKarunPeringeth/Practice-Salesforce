@@ -1,0 +1,12 @@
+<aura:component implements="flexipage:availableForAllPageTypes" controller="ContactDetailsController">
+    <aura:handler event="c:myEvent" action="{!c.handleApplicationEvent}"/>
+    <aura:attribute name="displayContact" type="contact[]"/>
+    
+    <aura:iteration var="cnt" items="{!v.displayContact}">
+        <section class="slds-box slds-grid slds-grid_vertical">
+            <div>Name:  {!cnt.Name}</div>
+            <div>Account:  {!cnt.Account.Id}</div>
+            <div>Phone:  {!cnt.Phone}</div>
+        </section>
+    </aura:iteration>
+</aura:component>
